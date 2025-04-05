@@ -1,18 +1,19 @@
-export const fetchAgenda = async (dispatchEvent, payload) => {
-    let response = await fetch ("https://playground.4geeks.com/contact/agendas/marcostorresf")
+export const fetchAgenda = async (dispatch, payload) => {
+    let response = await fetch("https://playground.4geeks.com/contact/agendas/marcostorresf");
     let data = await response.json();
 
-    if (data.detail == `Agenda "marcostorresf" doesn't exist.`){
+    if (data.detail == `Agenda "marcostorresf" doesn't exist.`) {
         createAgenda(); 
     }
+
     dispatch({
         type: "set_agenda",
-        payload: {agenda: data.slug, contacts: data.contacts },
+        payload: { agenda: data.slug, contacts: data.contacts },
     });
 }
 
 export const createAgenda = async (dispatch, payload) => {
-    let response = await fetch ("https://playground.4geeks.com/contact/agendas/marcostorresf", {
+    let response = await fetch("https://playground.4geeks.com/contact/agendas/marcostorresf", {
         method: "POST",
         headers: {"Content-type":"application/json"}
     })

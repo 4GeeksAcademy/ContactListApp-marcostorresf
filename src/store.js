@@ -33,7 +33,7 @@ export default function storeReducer(store, action = {}) {
         return {
           ...store,
           agenda: action.payload.agenda,
-          contacts: action.playload.contacts
+          contacts: action.payload.contacts
         }
         case 'get_contacts':
           return {

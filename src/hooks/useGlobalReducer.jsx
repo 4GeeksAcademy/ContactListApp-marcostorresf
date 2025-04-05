@@ -18,7 +18,7 @@ export function StoreProvider({ children }) {
         getContacts: (payload) => getContacts(dispatch,payload),
 
     }
-    return <StoreContext.Provider value={{ store, dispatch }}>
+    return <StoreContext.Provider value={{ store, dispatch, ...actions }}>
         {children}
     </StoreContext.Provider>
 }
