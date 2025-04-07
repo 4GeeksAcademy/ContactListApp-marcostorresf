@@ -18,7 +18,7 @@ export const createAgenda = async (dispatch, payload) => {
         headers: {"Content-type":"application/json"}
     })
     let data = await response.json()
-    fetchAgenda()
+    fetchAgenda(dispatch)
 
 }
 export const getContacts = async (dispatchEvent, payload) => {
@@ -30,4 +30,39 @@ export const getContacts = async (dispatchEvent, payload) => {
         type: "get_contacts",
         payload: {contacts: data.contacts },
     });
+}
+export const createContact = async (dispatch, payload) => {
+    let name = payload.name
+    let response = await fetch("https://playground.4geeks.com/contact/agendas/marcostorresf/contacts", {
+        method: "POST",
+        headers: {"Content-type":"application/json"},
+        body: JSON.stringify ({ 
+                "name": payload.name,
+                "phone": payload.phone,
+                "email": payload.email,
+                "address": payload.address
+            })
+    })
+    getContacts(dispatch);
+}
+export const updateContact = async (dispatch, payload) => {
+    let response = await fetch("https://playground.4geeks.com/contact/agendas/marcostorresf/contacts/" + payload.id, {
+        method: "PUT",
+        headers: {"Content-type":"application/json"},
+        body: JSON.stringify ({ 
+            "name": payload.name,
+            "phone": payload.phone,
+            "email": payload.email,
+            "address": payload.address
+        })
+    })
+    getContacts(dispatch);
+}
+export const deleteContact = async (dispatchEvent, payload) => {
+    let response = await fetch("https://playground.4geeks.com/contact/agendas/marcostorresf/contacts/ID", {
+        method: "DELETE",
+        headers: {"Content-type":"application/json"},
+    
+    })
+    getContacts();
 }
