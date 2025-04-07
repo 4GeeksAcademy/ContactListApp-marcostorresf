@@ -31,7 +31,7 @@ export const UpdateContact = () => {
 
    }
     return (
-      <div className="text-center mt-5">
+      <div className="w-75 mx-auto mt-5 container rounded p-4">
          <div className="input-group mb-3">
              <span className="input-group-text" id="inputGroup-sizing-default">Name</span>
              <input 
@@ -76,7 +76,7 @@ export const UpdateContact = () => {
                 aria-describedby="inputGroup-sizing-default"
                 />
           </div>
-          <button className="btn btn-success" onClick={(e) => handleUpdateContact(e) }>Update</button>
+          <button className="btn btn-dark" onClick={(e) => handleUpdateContact(e) }>Update</button>
       </div>
   );
 }; 

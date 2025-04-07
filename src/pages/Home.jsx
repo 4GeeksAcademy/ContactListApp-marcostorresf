@@ -25,9 +25,7 @@ export const Home = () => {
 				: <h1>Get some contacts</h1>
 			}
 			
-			
-			<Link className="btn btn-primary" to={"/create"}>Create</Link>
-			<Link className="btn btn-primary" to={"/delete"}>Delete</Link>
+		
 		</div>
 	);
 }; 

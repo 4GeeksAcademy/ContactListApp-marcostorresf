@@ -58,11 +58,11 @@ export const updateContact = async (dispatch, payload) => {
     })
     getContacts(dispatch);
 }
-export const deleteContact = async (dispatchEvent, payload) => {
-    let response = await fetch("https://playground.4geeks.com/contact/agendas/marcostorresf/contacts/ID", {
+export const deleteContact = async (dispatch, payload) => {
+    let response = await fetch("https://playground.4geeks.com/contact/agendas/marcostorresf/contacts/" + payload.id, {
         method: "DELETE",
         headers: {"Content-type":"application/json"},
     
     })
-    getContacts();
+    getContacts(dispatch);
 }

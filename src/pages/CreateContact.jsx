@@ -17,7 +17,7 @@ export const CreateContact = () => {
   
 
     return (
-        <div className="text-center mt-5">
+        <div className="w-75 mx-auto mt-5 container rounded p-4">
            <div className="input-group mb-3">
                <span className="input-group-text" id="inputGroup-sizing-default">Name</span>
                <input 
@@ -58,7 +58,7 @@ export const CreateContact = () => {
                   aria-describedby="inputGroup-sizing-default"
                   />
             </div>
-            <button className="btn btn-success" onClick={(e) => handleCreateContact(e) }>Create</button>
+            <button className="btn btn-dark" onClick={(e) => handleCreateContact(e) }>Create</button>
         </div>
     );
 }; 
