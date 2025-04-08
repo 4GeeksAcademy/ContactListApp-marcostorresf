@@ -17,7 +17,7 @@ export const CreateContact = () => {
   
 
     return (
-        <div className="w-75 mx-auto mt-5 container rounded p-4">
+        <div className="w-75 mx-auto mt-5 bg-dark container rounded p-4">
            <div className="input-group mb-3">
                <span className="input-group-text" id="inputGroup-sizing-default">Name</span>
                <input 
