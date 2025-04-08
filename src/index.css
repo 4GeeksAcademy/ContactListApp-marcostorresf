@@ -1,15 +1,13 @@
 body {
-    background-image: url('');
-    background-color: grey;
-    /* background-size: cover; */  
+    background-image: url('https://a-static.besthdwallpaper.com/programming-coding-language-wallpaper-2560x1440-81236_51.jpg');
+    background-color: black;
+    background-size: cover;  
 }
 footer {
+
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 2.5rem;   
 
-}
-.card {
-    margin:auto;
 }

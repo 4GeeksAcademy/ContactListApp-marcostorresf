@@ -76,7 +76,7 @@ export const UpdateContact = () => {
                 aria-describedby="inputGroup-sizing-default"
                 />
           </div>
-          <button className="btn btn-dark" onClick={(e) => handleUpdateContact(e) }>Update</button>
+          <button className="btn btn-outline-info" onClick={(e) => handleUpdateContact(e) }>Update</button>
       </div>
   );
 }; 

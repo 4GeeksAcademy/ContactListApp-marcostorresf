@@ -58,7 +58,7 @@ export const CreateContact = () => {
                   aria-describedby="inputGroup-sizing-default"
                   />
             </div>
-            <button className="btn btn-dark" onClick={(e) => handleCreateContact(e) }>Create</button>
+            <button className="btn btn-outline-info" onClick={(e) => handleCreateContact(e) }>Create</button>
         </div>
     );
 }; 
