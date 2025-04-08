@@ -8,8 +8,9 @@ export const ContactCard = ({ contact }) => {
 
   return (
 
-    <div className="card mx-2" style={{ "width": "18rem" }}>
-      <img src="..." className="card-img-top" alt="..." />
+ 
+    <div className="card mx-3" style={{ "width": "18rem" }}>
+      <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" className="card-img-top" alt="..." />
       <div className="card-body">
         <h5 className="card-title">{contact.name}</h5>
         <p className="card-text">{contact.phone}</p>
@@ -19,6 +20,6 @@ export const ContactCard = ({ contact }) => {
         <Link className="btn btn-danger mx-2" to={`/delete/${contact.id}`}><i class="fa-solid fa-trash"></i></Link>
       </div>
     </div>
-
+  
   );
 }; 

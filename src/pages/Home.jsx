@@ -8,7 +8,7 @@ export const Home = () => {
   const {store, dispatch, fetchAgenda} =useGlobalReducer()
 
   useEffect(() => {
-	fetchAgenda()
+	fetchAgenda(dispatch)
   }, [])
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export const Home = () => {
   }, [store.contacts])
   
 	return (
-		<div className="text-center mt-5">
+		<div className="text-center mt-5 d-flex justify-content-center">
 			{
 			    contacts?.length > 0
 			    ? contacts.map((contact, index) => (

@@ -21,7 +21,7 @@ export const createAgenda = async (dispatch, payload) => {
     fetchAgenda(dispatch)
 
 }
-export const getContacts = async (dispatchEvent, payload) => {
+export const getContacts = async (dispatch, payload) => {
     let response = await fetch ("https://playground.4geeks.com/contact/agendas/marcostorresf/contacts")
     let data = await response.json();
 
