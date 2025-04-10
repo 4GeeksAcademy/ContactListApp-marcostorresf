@@ -16,13 +16,13 @@ export const Home = () => {
   }, [store.contacts])
   
 	return (
-		<div className="text-center mt-5 d-flex justify-content-center">
+		<div className="text-center mt-5 d-flex justify-content-center text-white">
 			{
 			    contacts?.length > 0
 			    ? contacts.map((contact, index) => (
 				  <ContactCard key={index} contact={contact}/>
 				))
-				: <h1>Get some contacts</h1>
+				: <h1>Get Some Contacts</h1>
 			}
 			
 		

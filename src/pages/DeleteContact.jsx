@@ -8,9 +8,9 @@ export const DeleteContact = () => {
   const {store, dispatch} =useGlobalReducer()
   const {id} = useParams()
 
-  useEffect(() => {
-     deleteContact(dispatch, {id:id})
-    }, []) 
+//   useEffect(() => {
+//      deleteContact(dispatch, {id:id})
+//     }, []) 
 
     return (
         <div className="text-center mt-5">
